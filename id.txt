@@ -1,0 +1,27 @@
+int Increment;// an int variable will specify the number.
+// get last value and save it into Increment.
+System.Text.StringBuilder sb = new System.Text.StringBuilder("s");// here u can attach ur custom character
+Increment++;//increase variable
+sb.Append(Increment.ToString());
+//insert new record with increased value
+
+
+
+
+
+
+hi..i want Auto INCREMENT ID Number
+
+HEre i use Code
+
+con.Open()
+Dim query As String = "Select IsNULL(MAX(cast(SUBSTRING(F_ID,3,len(F_ID))+1,100 )) F_ID from Table2"
+Dim dr As SqlClient.SqlDataReader
+Dim cmd As New SqlCommand(query, con)
+dr = cmd.ExecuteReader
+dr.Read()
+'txt_FID.Text = dr(("F_ID").ToString)
+
+Dim result = String.Format("R{0:D3}", 100)
+txt_FID.Text = result
+con.Close(
